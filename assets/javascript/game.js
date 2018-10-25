@@ -38,15 +38,25 @@ function comPick() {
         }
 
 // Functions that update score and start the game
+function updateGame() {
+    if(tries === 0) {
+        document.querySelector("#tries").innerHTML = "Game Over! You Lose";
+    }
 
+    else {
+        document.querySelector("#tries").innerHTML = "You have: " + tries + "remaining";
+    }
+}
 
 function updateScore() {
     document.querySelector("#tries").innerHTML = "Remaining tries: " + tries;
-// }
+}
 
 //computer actually picks letter here, score updates
 comPick();
-updateScore();
+// updateGame();
+console.log(comPick);
+console.log(updateGame);
 // When user presses a key, it will run the following function
 document.onkeyup = function(event) {
     // If there are no more questions, stop the function.
@@ -74,8 +84,10 @@ document.onkeyup = function(event) {
             //need something here to show what letters have been used
         }
     }
+    
+
         //Count down the tries remaining
-        tries--;
+        // tries--;
 
         // Need to add function to add game over conditions and to show functions
     
