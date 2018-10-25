@@ -30,7 +30,57 @@ var wins = 0;
 var losses = 0;
 var tries = 10;
 
-// Guess what letter I'm thinking of
+// Functions
+
+// Functions letting the game continue or end
+function comPick() {
+    comSelection = Math.floor(Math.random(computerChoices.length));
+        }
+
+// Functions that update score and start the game
+
+
+function updateScore() {
+    document.querySelector("#tries").innerHTML = "Remaining tries: " + tries;
+// }
+
+//computer actually picks letter here, score updates
+comPick();
+updateScore();
+// When user presses a key, it will run the following function
+document.onkeyup = function(event) {
+    // If there are no more questions, stop the function.
+    if (tries === 0) {
+        return;
+    }
+
+    // Make key press lowercase
+    var userInput = event.key.toLowerCase();
+
+    // Only run this if key is pressed
+    if (userInput === "a" || userInput === "b" || userInput === "c" || userInput === "d" || userInput === "e" || userInput === "f" || userInput === "g" || userInput === "h" || userInput === "i" || userInput === "j" || userInput === "k" || userInput === "l" || userInput === "m" || userInput === "n" || userInput === "o" || userInput === "p" || userInput === "q" || userInput === "r" || userInput === "s" || userInput === "t" || userInput === "u" || userInput === "v" || userInput === "w" || userInput === "x" || userInput === "y" || userInput === "z")
+    // at the moment the winning letter is "j", need to retool to truly make the computerchoice random
+    
+    // ask about this in class tomorrow, needs shortening ASAP!!!
+
+    // If the user matches the computers choice, alert a win!
+    if (userInput === comSelection[tries]) {
+        alert("BINGO!!!");
+        wins++;
+    }
+        // alert if wrong.
+        else {
+            alert("Nah ah ah!!!");
+            //need something here to show what letters have been used
+        }
+    }
+        //Count down the tries remaining
+        tries--;
+
+        // Need to add function to add game over conditions and to show functions
+    
+
+
 
 // Wins: (# of times the user has guessed the letter correctly)
 
