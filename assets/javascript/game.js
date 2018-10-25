@@ -34,11 +34,9 @@ var tries = 10;
 
 // Functions letting the game continue or end
 function comPick() {
-    comSelection = Math.floor(Math.random(computerChoices.length));
-        }
-
-// Functions that update score and start the game
-function updateGame() {
+    comSelection = computerChoices[Math.floor(Math.random()*computerChoices.length)];
+    // computer should pick a letter first, then determine if there are enough tries remaining
+    // computer is always picking a at this point
     if(tries === 0) {
         document.querySelector("#tries").innerHTML = "Game Over! You Lose";
     }
@@ -46,17 +44,18 @@ function updateGame() {
     else {
         document.querySelector("#tries").innerHTML = "You have: " + tries + "remaining";
     }
-}
+        }
 
+// Functions that update score and start the game
 function updateScore() {
     document.querySelector("#tries").innerHTML = "Remaining tries: " + tries;
 }
 
 //computer actually picks letter here, score updates
 comPick();
-// updateGame();
+updateScore();
 console.log(comPick);
-console.log(updateGame);
+console.log(updateScore);
 // When user presses a key, it will run the following function
 document.onkeyup = function(event) {
     // If there are no more questions, stop the function.
