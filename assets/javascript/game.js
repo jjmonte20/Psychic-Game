@@ -46,15 +46,17 @@ document.onkeyup = function() {
                 console.log(compPicks);
             }
         }
-    } else {
+
+    }
+    // need to get people to avoid using keys other than the letters
+    else {
         alert("Please choose a letter");
     }
-        var html = "<p>Press any letter to start playing</p>" +
-        "<p>wins: " + wins + "</p>" + 
-        "<p>losses: " + losses + "</p>" + 
-        "<p>tries: " + tries + "</p>"
+        var html = "<p>Pick letters a-z, you start with 10 tries.  If your letter matches mine, you win!</p>" +
+        "<p>Wins: " + wins + "</p>" + 
+        "<p>Losses: " + losses + "</p>" + 
+        "<p>Attempts remaining: " + tries + "</p>"
 
         document.querySelector("#game").innerHTML = html;
-        //here is where the matching comes into play
     }   
     

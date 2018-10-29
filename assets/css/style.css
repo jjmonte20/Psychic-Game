@@ -1,0 +1,35 @@
+/* want a background image that fills the screen.  Text should be visible after applying the background */
+html {
+    background-image: url("../images/psychic-ability-768x522.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#ebebeb;
+ }
+
+ /* Want text to be organized */
+ body {
+     max-width: 960px;
+     height: 100%;
+     padding: 20px;
+     margin: auto;
+     background: grey;
+
+ }
+
+ /* text needs margins in the box they're in */
+ h1, p {
+    margin: 10px;
+    font-family: 'Charmonman', cursive;
+ }
+
+ h1 {
+    text-shadow: 0 0 3px greenyellow;
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#game {
+    text-align: center;
+    text-shadow: 0 0 3px palevioletred;
+}
