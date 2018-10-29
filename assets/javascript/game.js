@@ -1,10 +1,15 @@
 // here is the array of choices the computer can make
 var computerChoices = ["a", "b", "c", "d", "e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+var userPick = [];
 
 // here is the starting point for wins, losses, and tries remaining
 var wins = 0;
 var losses = 0;
 var tries = 10;
+//use these to show users guesses
+// var guesses = document.querySelector("guesses");
+// var guessChild = document.createElement("p");
+
 
 // Functions
 
@@ -15,7 +20,9 @@ document.onkeyup = function() {
     var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
     console.log(userGuess);
 
-
+// use a .push to to add user guess to array userGueses
+userPick.push(userGuess);
+console.log(userPick);
 // next thing will be to make the computer make another selection after the game is either won or over
 
 
@@ -36,6 +43,10 @@ document.onkeyup = function() {
             console.log(compPicks);
         } else if (userGuess !== compPicks) {
             tries--;
+            // guessChild.innerHTML() = userGuess;
+            // guesses.appendChild(guessChild);
+            
+
             alert("Tries remaining: " + tries);
             if (tries === 0) {
                 alert("You lose!");
@@ -56,7 +67,11 @@ document.onkeyup = function() {
         var html = "<p>Pick letters a-z, you start with 10 tries.  If your letter matches mine, you win!</p>" +
         "<p>Wins: " + wins + "</p>" + 
         "<p>Losses: " + losses + "</p>" + 
-        "<p>Attempts remaining: " + tries + "</p>"
+        "<p>Attempts remaining: " + tries + "</p>" +
+        // gives me one letter so far, but need more
+        "<p>Guesses so far: " + userPick + "</p>"
+        console.log(html);
+        
 
         document.querySelector("#game").innerHTML = html;
     }   
