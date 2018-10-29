@@ -52,6 +52,7 @@ document.onkeyup = function() {
     else {
         alert("Please choose a letter");
     }
+    // text is needed to keep track of the rules, and tallies after the user first presses a letter
         var html = "<p>Pick letters a-z, you start with 10 tries.  If your letter matches mine, you win!</p>" +
         "<p>Wins: " + wins + "</p>" + 
         "<p>Losses: " + losses + "</p>" + 
