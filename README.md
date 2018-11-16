@@ -1,5 +1,7 @@
 # Psychic-Game
 
+https://jjmonte20.github.io/Psychic-Game/
+
 Hey guys,
 
 Welcome to the Psychic game read-me file.  This will serve as a guide to exploring the web page.
